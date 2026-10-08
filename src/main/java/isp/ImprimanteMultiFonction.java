@@ -1,6 +1,6 @@
 package isp;
 
-public class ImprimanteMultiFonction implements Imprimante {
+public class ImprimanteMultiFonction implements Imprimante, Annulable, Scanner {
 
     @Override
     public void imprimer() {

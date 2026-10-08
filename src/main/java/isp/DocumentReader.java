@@ -1,14 +1,14 @@
 package isp;
 
-public class DocumentReader {
+public class DocumentReader implements Scanner{
 
-    private final Imprimante imprimante;
+    private final Scanner scanner;
 
-    public DocumentReader(Imprimante imprimante) {
-        this.imprimante = imprimante;
+    public DocumentReader(Scanner scanner) {
+        this.scanner = scanner;
     }
 
-    public void scanDocument() {
-        imprimante.scanner();
+    public void scanner() {
+        scanner.scanner();
     }
 }

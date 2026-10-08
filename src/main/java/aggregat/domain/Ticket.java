@@ -9,4 +9,12 @@ public class Ticket {
         this.id = UUID.randomUUID().toString();
         this.reservationName = reservationName;
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public boolean hasReservationName(String reservationNameToCompare) {
+        return reservationName.equals(reservationNameToCompare);
+    }
 }

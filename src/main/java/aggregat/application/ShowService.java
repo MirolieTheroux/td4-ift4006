@@ -14,15 +14,10 @@ public class ShowService {
     }
 
     public boolean sellTickets(int number, String reservationName) {
-        if (show.saleOpen && show.maximumCapacity >= show.ticketInventory.tickets.size() + number) {
-            show.ticketInventory.addTickets(number, reservationName);
-            return true;
-        }
-        return false;
+        return show.sellTickets(number, reservationName);
     }
 
     public List<String> retrieveTicketsIds(String reservationName) {
-        List<Ticket> ticketsWithReservationName = show.ticketInventory.tickets.stream().filter(ticket -> ticket.reservationName.equals(reservationName)).toList();
-        return ticketsWithReservationName.stream().map(ticket -> ticket.id).toList();
+        return show.retrieveTicketsIds(reservationName);
     }
 }
